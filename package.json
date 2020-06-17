@@ -1,0 +1,21 @@
+{
+  "name": "dockerized-timezone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start_dev": "nodemon -e mjs,js,hbs,json,css --trace-warnings --unhandled-rejections=strict app.js",
+    "start_live": "nodemon -e mjs,js,hbs,json,css app.js live-web.js",
+    "start_only": "node ./bin/www",
+    "mon": "nodemon -e mjs,js,hbs,json,css ./bin/www",
+    "forever_live": "forever --minUptime 5000 --spinSleepTime 3000 -e stderr -o stdout app.js",
+    "forever_stop": "forever stop ./bin/www"
+  },
+    
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "geo-tz": "^6.0.0"
+  }
+}
